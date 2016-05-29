@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/b0800"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Laranja"
+            android:text="@string/cenad"
+            android:textSize="16dp"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/b199"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Amarelo"
+                android:text="@string/sedec"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:textSize="16dp"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/b192"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Amarelo"
+                android:text="@string/samu"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:textSize="16dp"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/b193"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Laranja"
+            android:text="@string/bombeiros"
+            android:textSize="16dp"
+            android:padding="15dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/b190"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/Amarelo"
+                android:text="@string/policia"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:textSize="16dp"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/b191"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/Amarelo"
+                android:text="@string/prf"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:textSize="16dp"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/b166"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Laranja"
+            android:text="@string/antt"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

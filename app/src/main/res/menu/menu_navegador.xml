@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_rotulos"
+            android:title="@string/menu_rotulos" />
+        <item
+            android:id="@+id/nav_classes"
+            android:title="@string/menu_classes" />
+        <item
+            android:id="@+id/nav_numero_risco"
+            android:title="@string/menu_numeros" />
+        <item
+            android:id="@+id/nav_infracoes"
+            android:title="@string/menu_infracoes" />
+        <item
+            android:id="@+id/nav_pesquisa"
+            android:title="@string/menu_pesquisa" />
+        <item
+        android:id="@+id/nav_telefones"
+        android:title="@string/menu_telefones" />
+
+    </group>
+
+    <item android:title="@string/menu_info">
+        <menu>
+            <item
+                android:id="@+id/nav_sobre"
+                android:title="@string/menu_sobre" />
+        </menu>
+    </item>
+
+</menu>
