@@ -33,11 +33,11 @@ public class ProdutosPerigosos extends AppCompatActivity
     Resources r = null;
     FragmentManager fm;
     Fragment fragmento;
-    private FrameLayout tela;
     NavigationView navigationView;
     DrawerLayout drawer;
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
+    private FrameLayout tela;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

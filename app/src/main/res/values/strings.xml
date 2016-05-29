@@ -9,9 +9,7 @@
     <string name="info">Este aplicativo foi baseado em:\n- Res. n. 420 da Agência Nacional de Transportes Terrestres de 12fev04\n- NBR n. 7500/2013 da Associação Brasileira de Normas Técnicas\n- Manual de Emergências da Autaridade Nacional de Proteção Civil de Portugal\n- Recomendações para o transporte de produtos perigosos da Organização das Nações Unidas.</string>
     <string name="desenvolvedor">Versão: %1$s\n\nDesenvolvedor: Paulo E S Mesquita\nContato: mskapps.brazil@gmail.com</string>
     <string name="dica_sair">ATENÇÃO</string>
-    <string name="dica_classe">Classes de Risco</string>
     <string name="dica_detalhe_classe">Detalhes da Classe</string>
-    <string name="dica_numero_risco">Números de Risco</string>
     <string name="dica_produto">Detalhes do Produto</string>
     <string name="texto_sair">Você deseja fechar o aplicativo?</string>
 
@@ -63,7 +61,6 @@
     <string name="dica_painel">A identificação de riscos é constituída pela sinalização da unidade de transporte (rótulos de risco e painéis de segurança) e pela rotulagem das embalagens interna e externa (rótulos de risco, de segurança, especiais e símbolos de manuseio, quando aplicável).</string>
     <string name="dica_painel_1">O rótulo de risco é dividido em duas metades, sendo a metade superior do rótulo reservada para o símbolo de risco ou para o número das subclasses e a metade inferior para textos indicativos da natureza do risco, o número da classe ou subclasse e grupo de compatibilidade, quando apropriado.\nExistem ainda outros rótulos que devem utilizados para identificar outras situações de risco.</string>
     <string name="dica_painel_2">O painel de segurança comporta, conforme o caso, os números de identificação de risco (nº de risco) e do produto (nº ONU).\nQuando existem mais de um tipo de produtos sendo transportados, o painel utilizado não recebe números para indicar esta situação.</string>
-    <string name="info_painel">NBR 7500/2013</string>
 
     <!-- Strings de classes de produtos -->
 
@@ -79,10 +76,6 @@
     <string name="prf">Polícia Rodoviária Federal\n Telefone: 191</string>
     <string name="policia">Polícia Militar\n Telefone: 190</string>
     <string name="antt">Agência Nacional de\nTransportes Terrestres\n Telefone: 166</string>
-    <string name="title_activity_barra_lateral">Produtos Perigosos</string>
 
 
-    <string name="action_settings">Configurações</string>
-    <string name="title_classe_list">Classes de Risco</string>
-    <string name="title_classe_detail">Detalhes da Classe</string>
 </resources>
