@@ -223,7 +223,7 @@
             android:layout_gravity="center_horizontal">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:src="@drawable/rotulo_magnetizante"
                 android:layout_weight="1"
