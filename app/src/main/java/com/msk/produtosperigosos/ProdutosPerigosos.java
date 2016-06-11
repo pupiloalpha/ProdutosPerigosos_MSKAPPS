@@ -54,7 +54,7 @@ public class ProdutosPerigosos extends AppCompatActivity
         toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
-        //toggle.syncState();
+        toggle.syncState();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
 
@@ -172,12 +172,14 @@ public class ProdutosPerigosos extends AppCompatActivity
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
         toggle.syncState();
+        Iniciador();
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         toggle.onConfigurationChanged(newConfig);
+        Iniciador();
     }
 
 
