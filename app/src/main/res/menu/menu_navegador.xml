@@ -18,8 +18,8 @@
             android:id="@+id/nav_pesquisa"
             android:title="@string/menu_pesquisa" />
         <item
-        android:id="@+id/nav_telefones"
-        android:title="@string/menu_telefones" />
+            android:id="@+id/nav_telefones"
+            android:title="@string/menu_telefones" />
 
     </group>
 

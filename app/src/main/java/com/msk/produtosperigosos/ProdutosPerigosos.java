@@ -1,5 +1,6 @@
 package com.msk.produtosperigosos;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -10,13 +11,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import com.msk.produtosperigosos.info.Simbologia;
 import com.msk.produtosperigosos.info.SobreApp;
@@ -30,24 +28,21 @@ import com.msk.produtosperigosos.listas.PesquisaProduto;
 public class ProdutosPerigosos extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    Resources r = null;
-    FragmentManager fm;
-    Fragment fragmento;
-    NavigationView navigationView;
-    DrawerLayout drawer;
-    ActionBarDrawerToggle toggle;
-    Toolbar toolbar;
-    private FrameLayout tela;
+    private Resources r = null;
+    private FragmentManager fm;
+    private Fragment fragmento;
+    private NavigationView navigationView;
+    private DrawerLayout drawer;
+    private ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_navegador);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         r = getResources();
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        tela = (FrameLayout) findViewById(R.id.tela);
 
         setSupportActionBar(toolbar);
 
@@ -144,8 +139,7 @@ public class ProdutosPerigosos extends AppCompatActivity
     }
 
     private void Dialogo() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(
-                new ContextThemeWrapper(this, R.style.TemaDialogo));
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle(R.string.dica_sair);
         builder.setMessage(R.string.texto_sair);
