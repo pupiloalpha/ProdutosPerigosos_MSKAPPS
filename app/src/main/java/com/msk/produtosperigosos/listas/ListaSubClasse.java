@@ -3,7 +3,6 @@ package com.msk.produtosperigosos.listas;
 import android.annotation.SuppressLint;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -13,6 +12,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.msk.produtosperigosos.R;
 
@@ -50,7 +51,7 @@ public class ListaSubClasse extends AppCompatActivity {
     private void Iniciador() {
 
         // ELEMENTO DA TELA
-        subclasses = (ListView) findViewById(R.id.lvSubclasse);
+        subclasses = findViewById(R.id.lvSubclasse);
         // VETORES COM INFORMACOES DAS CLASSES
         nomeClasse = r.getStringArray(R.array.nr_classe_risco);
         detClasse = r.getStringArray(R.array.detalhe_classe);
@@ -174,7 +175,7 @@ public class ListaSubClasse extends AppCompatActivity {
             inflaLista = getLayoutInflater();
             if (nrLinha == 0 || nrLinha == 2) {
                 linhaView = inflaLista.inflate(R.layout.nome_classe, null);
-                classe = (TextView) linhaView
+                classe = linhaView
                         .findViewById(R.id.tvNomeClasse);
                 if (nrLinha == 0)
                     classe.setText(nomeClasse[nrClasse]);
@@ -183,17 +184,17 @@ public class ListaSubClasse extends AppCompatActivity {
             } else if (nrLinha == 1) {
                 linhaView = inflaLista.inflate(R.layout.detalhe_classe,
                         null);
-                detalhe = (TextView) linhaView
+                detalhe = linhaView
                         .findViewById(R.id.tvDetalheClasse);
                 detalhe.setText(Html.fromHtml("<b>" + r.getString(R.string.dica_nome_classe) + "</b>" + "<br />" + detClasse[nrClasse]));
             } else {
                 linhaView = inflaLista.inflate(
                         R.layout.item_subclasse_risco, null);
-                rotulo = (ImageView) linhaView
+                rotulo = linhaView
                         .findViewById(R.id.ivRotuloSubClasse);
-                numero = (TextView) linhaView
+                numero = linhaView
                         .findViewById(R.id.tvNrSubclasse);
-                subclasse = (TextView) linhaView
+                subclasse = linhaView
                         .findViewById(R.id.tvNomeSubclasse);
                 rotulo.setImageResource(rotuloId[nrLinha - 3]);
                 numero.setText(nSubclasse[nrLinha - 3]);

@@ -5,7 +5,7 @@
         <item name="colorPrimary">@color/Escuro</item>
         <item name="colorPrimaryDark">@color/preto</item>
         <item name="colorAccent">@color/Laranja</item>
-        <item name="android:alertDialogTheme">@style/TemaDialogo</item>
+        <item name="alertDialogTheme">@style/TemaDialogo</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

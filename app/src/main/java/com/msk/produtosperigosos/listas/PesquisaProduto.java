@@ -3,8 +3,6 @@ package com.msk.produtosperigosos.listas;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -14,6 +12,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.fragment.app.Fragment;
 
 import com.msk.produtosperigosos.R;
 
@@ -38,8 +39,8 @@ public class PesquisaProduto extends Fragment implements OnItemClickListener,
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        textoPesquisado = (AppCompatEditText) tela.findViewById(R.id.etNomePesquisado);
-        listaProdutos = (ListView) tela
+        textoPesquisado = tela.findViewById(R.id.etNomePesquisado);
+        listaProdutos = tela
                 .findViewById(R.id.lvProdutosPesquisados);
 
         listaCompleta = new ArrayList<HashMap<String, String>>();

@@ -3,7 +3,6 @@ package com.msk.produtosperigosos.listas;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.fragment.app.ListFragment;
 
 import com.msk.produtosperigosos.R;
 
@@ -89,8 +90,8 @@ public class ListaClasseDeRisco extends ListFragment {
             inflaLista = getActivity().getLayoutInflater();
 
             linhaView = inflaLista.inflate(R.layout.item_classe_risco, null);
-            rotulo = (ImageView) linhaView.findViewById(R.id.ivRotulo);
-            classe = (TextView) linhaView.findViewById(R.id.tvClasseRotulo);
+            rotulo = linhaView.findViewById(R.id.ivRotulo);
+            classe = linhaView.findViewById(R.id.tvClasseRotulo);
 
             rotulo.setImageResource(rotuloId[position]);
             classe.setText(nrClasse[position]);

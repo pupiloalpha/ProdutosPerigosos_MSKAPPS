@@ -27,7 +27,7 @@
     <!-- Strings para tela inicial -->
 
     <string name="dica_app">LISTA DE PRODUTOS PERIGOSOS</string>
-    <string name="dica_navegar">Para abrir o menu lateral, clique no ícone de navegação do canto superior esquerdo da tela ou deslize o dedo iniciando da borda esquerda para a borda direita da tela.</string>
+    <string name="dica_navegar">Para abrir o menu lateral, clique no ícone de navegação do canto superior esquerdo da tela ou deslize o dedo iniciando da borda esquerda para a direita da tela.</string>
     <string name="sobre">Baseado no Regulamento de Transporte Terrestre de Produtos Perigosos da ANTT, na NBR 7500 da ABNT, no Manual de Emergência da ANPC e nas Recomendações para transporte de produtos perigosos da ONU.</string>
     <string name="navegar">Opções de Navegação</string>
 

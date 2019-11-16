@@ -3,11 +3,12 @@ package com.msk.produtosperigosos.info;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import com.msk.produtosperigosos.R;
 
@@ -24,7 +25,7 @@ public class SobreApp extends Fragment {
 
         tela = inflater.inflate(R.layout.sobre, container, false);
 
-        versao = (TextView) tela.findViewById(R.id.tvVersaoApp);
+        versao = tela.findViewById(R.id.tvVersaoApp);
 
         try {
             pinfo = getActivity().getPackageManager().getPackageInfo(getActivity().getPackageName(), 0);

@@ -3,12 +3,13 @@ package com.msk.produtosperigosos.info;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import androidx.fragment.app.Fragment;
 
 import com.msk.produtosperigosos.R;
 
@@ -25,13 +26,13 @@ public class TelefonesUteis extends Fragment implements OnClickListener {
 
         tela = inflater.inflate(R.layout.telefones, container, false);
 
-        n190 = (Button) tela.findViewById(R.id.b190);
-        n191 = (Button) tela.findViewById(R.id.b191);
-        n192 = (Button) tela.findViewById(R.id.b192);
-        n193 = (Button) tela.findViewById(R.id.b193);
-        n166 = (Button) tela.findViewById(R.id.b166);
-        n199 = (Button) tela.findViewById(R.id.b199);
-        n0800 = (Button) tela.findViewById(R.id.b0800);
+        n190 = tela.findViewById(R.id.b190);
+        n191 = tela.findViewById(R.id.b191);
+        n192 = tela.findViewById(R.id.b192);
+        n193 = tela.findViewById(R.id.b193);
+        n166 = tela.findViewById(R.id.b166);
+        n199 = tela.findViewById(R.id.b199);
+        n0800 = tela.findViewById(R.id.b0800);
 
         n190.setOnClickListener(this);
         n191.setOnClickListener(this);

@@ -3,12 +3,13 @@ package com.msk.produtosperigosos.info;
 import android.annotation.SuppressLint;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.msk.produtosperigosos.R;
 
@@ -45,18 +46,18 @@ public class DetalheProduto extends AppCompatActivity {
     private void Inicando() {
 
         // ELEMENTOS QUE SERAO EXIBIDOS NA TELA
-        nrONU = (TextView) findViewById(R.id.tvNrONU);
-        nrClasse = (TextView) findViewById(R.id.tvNrClasse);
-        nrRisco = (TextView) findViewById(R.id.tvNrRisco);
-        nomeProduto = (TextView) findViewById(R.id.tvNomeProduto);
-        nomeClasse = (TextView) findViewById(R.id.tvNomeClasse);
-        nomeRisco = (TextView) findViewById(R.id.tvNomeRisco);
-        rotulo = (ImageView) findViewById(R.id.ivRotuloRisco);
-        saude = (TextView) findViewById(R.id.tvPerigoSaude);
-        incendio = (TextView) findViewById(R.id.tvPerigoIncendio);
-        nivelProtecao = (TextView) findViewById(R.id.tvNivelProtecao);
-        isolamento = (TextView) findViewById(R.id.tvIsolamento);
-        evacuacao = (TextView) findViewById(R.id.tvEvacuacao);
+        nrONU = findViewById(R.id.tvNrONU);
+        nrClasse = findViewById(R.id.tvNrClasse);
+        nrRisco = findViewById(R.id.tvNrRisco);
+        nomeProduto = findViewById(R.id.tvNomeProduto);
+        nomeClasse = findViewById(R.id.tvNomeClasse);
+        nomeRisco = findViewById(R.id.tvNomeRisco);
+        rotulo = findViewById(R.id.ivRotuloRisco);
+        saude = findViewById(R.id.tvPerigoSaude);
+        incendio = findViewById(R.id.tvPerigoIncendio);
+        nivelProtecao = findViewById(R.id.tvNivelProtecao);
+        isolamento = findViewById(R.id.tvIsolamento);
+        evacuacao = findViewById(R.id.tvEvacuacao);
 
 
         // BUSCA DETALHES NO ARQUIVO XML

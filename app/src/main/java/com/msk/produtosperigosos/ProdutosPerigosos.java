@@ -1,21 +1,22 @@
 package com.msk.produtosperigosos;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+import com.google.android.material.navigation.NavigationView;
 import com.msk.produtosperigosos.info.Simbologia;
 import com.msk.produtosperigosos.info.SobreApp;
 import com.msk.produtosperigosos.info.TelaInicial;
@@ -39,10 +40,10 @@ public class ProdutosPerigosos extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_navegador);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         r = getResources();
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
 
         setSupportActionBar(toolbar);
 
@@ -51,7 +52,7 @@ public class ProdutosPerigosos extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
 
         fm = getSupportFragmentManager();
 
@@ -97,7 +98,7 @@ public class ProdutosPerigosos extends AppCompatActivity
 
         fm.beginTransaction().replace(R.id.tela, fragmento).commit();
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -119,7 +120,7 @@ public class ProdutosPerigosos extends AppCompatActivity
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         getSupportActionBar().setTitle(r.getString(R.string.app_name));
 
         if (keyCode == KeyEvent.KEYCODE_MENU) {
