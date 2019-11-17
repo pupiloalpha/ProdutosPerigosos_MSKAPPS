@@ -1,7 +1,7 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Tema do aplicativo com Teste de tema escuro -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
         <item name="colorPrimary">@color/Escuro</item>
         <item name="colorPrimaryDark">@color/preto</item>
         <item name="colorAccent">@color/Laranja</item>
@@ -15,15 +15,20 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.DayNight" />
 
     <!-- Tema das caixas de diálogos -->
-    <style name="TemaDialogo" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <style name="TemaPesquisa" parent="Theme.AppCompat.Light">
         <item name="colorAccent">@color/Laranja</item>
     </style>
 
     <!-- Tema das caixas de diálogos -->
-    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="TemaDialogo" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="colorAccent">@color/Laranja</item>
+    </style>
+
+    <!-- Tema das caixas de diálogos -->
+    <style name="SplashScreen" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 

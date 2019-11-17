@@ -6,7 +6,7 @@
 
     <!-- Strings para detalhes do aplicativo -->
 
-    <string name="info">Este aplicativo foi baseado em:\n- Res. n. 420 da Agência Nacional de Transportes Terrestres de 12fev04\n- NBR n. 7500/2013 da Associação Brasileira de Normas Técnicas\n- Manual de Emergências da Autaridade Nacional de Proteção Civil de Portugal\n- Recomendações para o transporte de produtos perigosos da Organização das Nações Unidas.</string>
+    <string name="info">Este aplicativo foi baseado em:\n- Res. n. 420 da Agência Nacional de Transportes Terrestres de 12fev04\n- NBR n. 7500/2013 da Associação Brasileira de Normas Técnicas\n- Manual de Emergências da Autoridade Nacional de Proteção Civil de Portugal\n- Recomendações para o transporte de produtos perigosos da Organização das Nações Unidas.</string>
     <string name="desenvolvedor">Versão: %1$s\n\nDesenvolvedor: Paulo E S Mesquita\nContato: mskapps.brazil@gmail.com</string>
     <string name="dica_sair">ATENÇÃO</string>
     <string name="dica_detalhe_classe">Detalhes da Classe</string>
