@@ -2,27 +2,33 @@ package com.msk.produtosperigosos.listas;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import androidx.appcompat.widget.AppCompatEditText;
 import androidx.fragment.app.ListFragment;
 
 import com.msk.produtosperigosos.R;
+import com.msk.produtosperigosos.info.Riscos;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ListaNrDeRisco extends ListFragment {
+
+public class ListaNrDeRisco extends ListFragment implements TextWatcher {
 
     SimpleAdapter adapter;
     List<HashMap<String, String>> listaCompleta;
     HashMap<String, String> hm;
     Resources r = null;
-    private String[] nrRisco, nomeRisco, itemlinha;
+    private AppCompatEditText textoPesquisado;
+    private String[] itemlinha;
     private int[] linhaLista;
     private View tela;
 
@@ -30,18 +36,15 @@ public class ListaNrDeRisco extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
+        textoPesquisado = tela.findViewById(R.id.etNomePesquisado);
         listaCompleta = new ArrayList<HashMap<String, String>>();
 
         r = getResources();
 
-        nrRisco = r.getStringArray(R.array.nr_risco_codigo);
-        nomeRisco = r.getStringArray(R.array.nr_risco_nome);
-
-        for (int i = 0; i < nrRisco.length; i++) {
+        for (int i = 0; i < Riscos.nrRisco.length; i++) {
             hm = new HashMap<String, String>();
-            hm.put("nr", nrRisco[i]);
-            hm.put("nome", nomeRisco[i]);
+            hm.put("nr", Riscos.nrRisco[i]);
+            hm.put("nome", Riscos.nomeRisco[i]);
             listaCompleta.add(hm);
         }
 
@@ -53,6 +56,7 @@ public class ListaNrDeRisco extends ListFragment {
 
         setListAdapter(adapter);
 
+        textoPesquisado.addTextChangedListener(this);
     }
 
     @Override
@@ -69,6 +73,24 @@ public class ListaNrDeRisco extends ListFragment {
 
         // ACAO QUANDO ALGUM ITEM FOR CLICADO
 
+    }
+
+
+    @Override
+    public void afterTextChanged(Editable arg0) {
+
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count,
+                                  int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+        ListaNrDeRisco.this.adapter.getFilter().filter(s);
     }
 
 

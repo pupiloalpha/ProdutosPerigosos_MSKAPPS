@@ -12,11 +12,11 @@
             android:id="@+id/nav_numero_risco"
             android:title="@string/menu_numeros" />
         <item
-            android:id="@+id/nav_infracoes"
-            android:title="@string/menu_infracoes" />
-        <item
             android:id="@+id/nav_pesquisa"
             android:title="@string/menu_pesquisa" />
+        <item
+            android:id="@+id/nav_infracoes"
+            android:title="@string/menu_infracoes" />
         <item
             android:id="@+id/nav_telefones"
             android:title="@string/menu_telefones" />

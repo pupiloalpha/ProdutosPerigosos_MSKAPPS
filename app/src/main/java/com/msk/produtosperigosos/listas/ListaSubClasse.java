@@ -3,7 +3,6 @@ package com.msk.produtosperigosos.listas;
 import android.annotation.SuppressLint;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -155,7 +154,10 @@ public class ListaSubClasse extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return detSubclasse.length + 3;
+            if (detSubclasse.length == 1)
+                return 3;
+            else
+                return detSubclasse.length + 3;
         }
 
         @Override
@@ -173,20 +175,35 @@ public class ListaSubClasse extends AppCompatActivity {
 
             linhaView = lView;
             inflaLista = getLayoutInflater();
-            if (nrLinha == 0 || nrLinha == 2) {
+            if (nrLinha == 0) {
                 linhaView = inflaLista.inflate(R.layout.nome_classe, null);
                 classe = linhaView
                         .findViewById(R.id.tvNomeClasse);
-                if (nrLinha == 0)
-                    classe.setText(nomeClasse[nrClasse]);
-                else
-                    classe.setText(r.getString(R.string.subclasses));
+                classe.setText(nomeClasse[nrClasse]);
+
             } else if (nrLinha == 1) {
                 linhaView = inflaLista.inflate(R.layout.detalhe_classe,
                         null);
                 detalhe = linhaView
                         .findViewById(R.id.tvDetalheClasse);
-                detalhe.setText(Html.fromHtml("<b>" + r.getString(R.string.dica_nome_classe) + "</b>" + "<br />" + detClasse[nrClasse]));
+                detalhe.setText(detClasse[nrClasse]);
+            } else if (nrLinha == 2 && detSubclasse.length > 1) {
+                linhaView = inflaLista.inflate(R.layout.nome_subclasse, null);
+                classe = linhaView
+                        .findViewById(R.id.tvPossuiSubClasse);
+            } else if (detSubclasse.length == 1) {
+
+                linhaView = inflaLista.inflate(
+                        R.layout.item_subclasse_risco, null);
+                rotulo = linhaView
+                        .findViewById(R.id.ivRotuloSubClasse);
+                numero = linhaView
+                        .findViewById(R.id.tvNrSubclasse);
+                subclasse = linhaView
+                        .findViewById(R.id.tvNomeSubclasse);
+                rotulo.setImageResource(rotuloId[0]);
+                numero.setText(nSubclasse[0]);
+                subclasse.setText(detSubclasse[0]);
             } else {
                 linhaView = inflaLista.inflate(
                         R.layout.item_subclasse_risco, null);

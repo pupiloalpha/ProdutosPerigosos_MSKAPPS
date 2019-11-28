@@ -9,6 +9,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@color/Laranja"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNomePesquisado"
+            android:layout_width="0dp"
+            android:layout_height="45.0dip"
+            android:layout_margin="2.0dip"
+            android:layout_weight="0.77"
+            android:background="@color/Branco"
+            android:ems="10"
+            android:hint="@string/dica_riscos"
+            android:paddingLeft="10.0dip"
+            android:textColor="@color/Escuro"
+            android:theme="@style/TemaPesquisa" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/Amarelo">
 
         <TextView

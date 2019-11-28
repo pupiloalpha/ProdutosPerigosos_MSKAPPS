@@ -23,18 +23,27 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvNomeProduto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
             android:text="@string/dica_nome_produto"
-            android:textAppearance="?android:attr/textAppearance" />
+            android:textAppearance="?android:attr/textAppearance"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNomeProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/dica_nome_produto"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="5dp">
 
             <ImageView
@@ -47,7 +56,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:orientation="vertical">
 
@@ -56,17 +65,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
                     android:text="@string/dica_nr_classe"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/dica_nome_classe"
+                    android:textAppearance="?android:attr/textAppearance"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvNomeClasse"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent"
                     android:text="@string/dica_nome_classe"
-                    android:textAppearance="?android:attr/textAppearance" />
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
 
             </LinearLayout>
         </LinearLayout>
@@ -78,28 +95,48 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:text="@string/dica_nr_risco"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/dica_nome_risco"
+            android:textAppearance="?android:attr/textAppearance"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvNomeRisco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="@string/dica_nome_risco"
-            android:textAppearance="?android:attr/textAppearance" />
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Amarelo"
             android:gravity="center"
-            android:padding="3dp"
-            android:text="@string/nome_risco"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="5dp"
+            android:text="@string/info_risco"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/dica_saude"
+            android:textAppearance="?android:attr/textAppearance"
             android:textStyle="bold" />
 
         <TextView
@@ -108,9 +145,19 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/dica_saude"
-            android:textAppearance="?android:attr/textAppearance" />
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/dica_incendio"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvPerigoIncendio"
@@ -118,9 +165,19 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/dica_incendio"
-            android:textAppearance="?android:attr/textAppearance" />
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/dica_protecao"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvNivelProtecao"
@@ -128,31 +185,49 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/dica_protecao"
-            android:textAppearance="?android:attr/textAppearance" />
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/dica_isolamento"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvIsolamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/dica_isolamento"
-            android:textAppearance="?android:attr/textAppearance" />
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/dica_evacuacao"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvEvacuacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/dica_evacuacao"
-            android:textAppearance="?android:attr/textAppearance" />
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </LinearLayout>
 

@@ -6,7 +6,8 @@
 
     <!-- Strings para detalhes do aplicativo -->
 
-    <string name="info">Este aplicativo foi baseado em:\n- Res. n. 420 da Agência Nacional de Transportes Terrestres de 12fev04\n- NBR n. 7500/2013 da Associação Brasileira de Normas Técnicas\n- Manual de Emergências da Autoridade Nacional de Proteção Civil de Portugal\n- Recomendações para o transporte de produtos perigosos da Organização das Nações Unidas.</string>
+    <string name="info">Este aplicativo foi baseado em:\n- Resolução n. 5.232/2016 da Agência Nacional de Transportes Terrestres (ANTT)\n- NBR n. 7500/2013 da Associação Brasileira de Normas Técnicas (ABNT)\n- Manual de Emergências da Autoridade Nacional de Proteção Civil de Portugal (ANPC)\n- Recomendações para o transporte de produtos perigosos da Organização das Nações Unidas\n- Manual de fiscalização do transporte rodoviário nacional e internacional de
+produtos perigosos da ANTT de 2018\n- Guia de respostas a emergências do Departamento dos Transportes dos Estados Unidos (USDT) de 2016.</string>
     <string name="desenvolvedor">Versão: %1$s\n\nDesenvolvedor: Paulo E S Mesquita\nContato: mskapps.brazil@gmail.com</string>
     <string name="dica_sair">ATENÇÃO</string>
     <string name="dica_detalhe_classe">Detalhes da Classe</string>
@@ -18,7 +19,7 @@
     <string name="menu_rotulos">Rótulos e Painéis</string>
     <string name="menu_classes">Classes de Risco</string>
     <string name="menu_numeros">Números de Risco</string>
-    <string name="menu_pesquisa">Pesquisa produto</string>
+    <string name="menu_pesquisa">Relação de produtos</string>
     <string name="menu_infracoes">Códigos de infrações</string>
     <string name="menu_telefones">Telefones úteis</string>
     <string name="menu_info">Informações</string>
@@ -35,13 +36,16 @@
 
     <string name="icone">icone</string>
     <string name="nr">X000</string>
-    <string name="dica_pesquisa">Digite o nome ou numero da ONU</string>
+    <string name="dica_pesquisa">Digite o nome ou número da ONU</string>
+    <string name="dica_infracoes">Digite o código, amparo ou infração</string>
+    <string name="dica_riscos">Digite o nome ou número de risco</string>
 
     <!-- Strings para detalhes do produto -->
 
     <string name="vazio">Nenhum item disponível</string>
     <string name="nr_risco">Número</string>
     <string name="nome_risco">Descrição do risco</string>
+    <string name="info_risco">Informações e orientações</string>
     <string name="nome_produto">Nome do produto</string>
     <string name="codigo_infracao">Código</string>
     <string name="nome_infracao">Amparo / Descrição</string>
@@ -76,6 +80,5 @@
     <string name="prf">Polícia Rodoviária Federal\n Telefone: 191</string>
     <string name="policia">Polícia Militar\n Telefone: 190</string>
     <string name="antt">Agência Nacional de\nTransportes Terrestres\n Telefone: 166</string>
-
 
 </resources>

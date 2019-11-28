@@ -31,15 +31,16 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="@string/vazio"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/Escuro" />
+            android:textAppearance="?android:attr/textAppearance"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tvNomeSubclasse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:text="@string/vazio" />
+            android:text="@string/vazio"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
     </LinearLayout>
 
 </LinearLayout>
