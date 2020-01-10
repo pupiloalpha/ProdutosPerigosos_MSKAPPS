@@ -85,7 +85,7 @@ public final class Guias {
                     "- Será facilmente inflamável pelo calor, faíscas ou chamas." + "<br />" +
                     "- Formará misturas explosivas com o ar." + "<br />" +
                     "- Os vapores de gás liquefeito são inicialmente mais pesados do que o ar e espalham-se ao longo do solo." + "<br />" +
-                    "- ATENÇÃO: Hidrogénio (n.º ONU 1049), Deutério (n.º ONU 1957), Hidrogénio líquido refrigerado (n.º ONU 1966) e Metano (n.º ONU 1971) são mais leves que o ar e sobem no ar. Incêndios de Hidrogénio e Deutério são difíceis de detectar uma vez que ardem com uma chama invisível. Use um método alternativo de detecção (câmera térmica, detector térmico, etc.)" + "<br />" +
+                    "- ATENÇÃO: Hidrogênio (n.º ONU 1049), Deutério (n.º ONU 1957), Hidrogênio líquido refrigerado (n.º ONU 1966) e Metano (n.º ONU 1971) são mais leves que o ar e sobem no ar. Incêndios de Hidrogênio e Deutério são difíceis de detectar uma vez que ardem com uma chama invisível. Use um método alternativo de detecção (câmera térmica, detector térmico, etc.)" + "<br />" +
                     "- Os vapores podem deslocar-se para uma fonte de ignição e incendiar-se." + "<br />" +
                     "- Cilindros expostos ao fogo podem ventilar e libertar gases inflamáveis através de dispositivos de alívio de pressão." + "<br />" +
                     "- Os recipientes podem explodir quando aquecidos." + "<br />" +
@@ -229,7 +229,7 @@ public final class Guias {
             "- Material inflamável/ combustível." + "<br />" +
                     "- Pode ser inflamado pelo calor, faíscas ou chamas." + "<br />" +
                     "- Quando aquecidos, os vapores podem formar misturas explosivas com o ar: Perigo de explosão dentro de edifícios, ao ar livre e nos esgotos." + "<br />" +
-                    "- O contato com metais pode desenvolver gás hidrogénio inflamável." + "<br />" +
+                    "- O contato com metais pode desenvolver gás hidrogênio inflamável." + "<br />" +
                     "- Os recipientes podem explodir quando aquecidos.",  // Guia 134
             "- Material inflamável/ combustível." + "<br />" +
                     "- Pode inflamar-se em contato com o ar úmido ou umidade." + "<br />" +
@@ -603,7 +603,7 @@ public final class Guias {
                     "- A água de controlo do incêndio ou de diluição pode causar poluição.", // Guia 146
             "- O contato com o eletrólito da bateria pode ser irritante para a pele, olhos e membranas mucosas." + "<br />" +
                     "- O incêndio produz gases irritantes, corrosivos e/ou tóxicos." + "<br />" +
-                    "- Baterias queimando podem produzir gás tóxico de Fluoreto de Hidrogénio (ver Guia 125)." + "<br />" +
+                    "- Baterias queimando podem produzir gás tóxico de Fluoreto de Hidrogênio (ver Guia 125)." + "<br />" +
                     "- A fumaça pode causar tonturas ou asfixia.", // Guia 147
             "- O incêndio pode produzir gases irritantes, corrosivos e/ou tóxicos." + "<br />" +
                     "- Ingestão ou o contato (pele, olhos) com substância podem causar ferimentos graves ou queimaduras." + "<br />" +

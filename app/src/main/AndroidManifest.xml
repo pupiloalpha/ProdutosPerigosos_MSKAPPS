@@ -30,7 +30,8 @@
         <activity
             android:name="com.msk.produtosperigosos.info.DetalheProduto"
             android:label="@string/dica_produto"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.msk.produtosperigosos.PRODUTO" />
 
@@ -40,7 +41,8 @@
         <activity
             android:name="com.msk.produtosperigosos.listas.ListaSubClasse"
             android:label="@string/dica_detalhe_classe"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.msk.produtosperigosos.CLASSE" />
 
