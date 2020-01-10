@@ -7,8 +7,8 @@ android {
         applicationId "com.msk.produtosperigosos"
         minSdkVersion 15
         targetSdkVersion 29
-        versionCode 4020300
-        versionName "2.3.0"
+        versionCode 4020301
+        versionName "2.3.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
