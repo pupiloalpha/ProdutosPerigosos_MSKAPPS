@@ -19,8 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".listas.ListaSubClasse" />
-        <activity android:name=".info.DetalheProduto" android:exported="true">
+        <activity android:name=".listas.ListaSubClasse" android:theme="@style/Theme.ProdutosPerigosos"/>
+        <activity android:name=".info.DetalheProduto" android:exported="true" android:theme="@style/Theme.ProdutosPerigosos">
             <intent-filter>
                 <action android:name="com.msk.produtosperigosos.PRODUTO" />
                 <category android:name="android.intent.category.DEFAULT" />

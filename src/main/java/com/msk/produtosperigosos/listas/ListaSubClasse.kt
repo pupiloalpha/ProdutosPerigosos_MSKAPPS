@@ -13,6 +13,7 @@ import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.color.MaterialColors
 import com.msk.produtosperigosos.R
 
 class ListaSubClasse : AppCompatActivity() {
@@ -150,6 +151,7 @@ class ListaSubClasse : AppCompatActivity() {
     private fun usarActionBar() {
         val toolbar = findViewById<Toolbar?>(R.id.toolbar)
         setSupportActionBar(toolbar)
+        supportActionBar?.title = getString(R.string.dica_detalhe_classe)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
     }

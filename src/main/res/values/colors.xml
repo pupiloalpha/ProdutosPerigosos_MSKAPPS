@@ -3,7 +3,7 @@
     <!-- Primary Colors -->
     <color name="md_theme_light_primary">#FF9800</color> <!-- orange -->
     <color name="md_theme_light_onPrimary">#FFFFFFFF</color>
-    <color name="md_theme_light_primaryContainer">#FFE0B2</color>
+    <color name="md_theme_light_primaryContainer">#FFBB33</color>
     <color name="md_theme_light_onPrimaryContainer">#212121</color>
 
     <!-- Secondary Colors -->

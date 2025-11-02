@@ -21,5 +21,8 @@
         <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
         <item name="android:windowBackground">@color/md_theme_dark_background</item>
         <item name="android:textColor">@color/md_theme_dark_onBackground</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
 </resources>

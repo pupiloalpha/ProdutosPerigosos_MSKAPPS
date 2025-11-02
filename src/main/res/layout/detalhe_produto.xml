@@ -10,8 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:titleTextColor="?attr/colorOnPrimary" />
+        android:background="?attr/colorPrimary"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +26,7 @@
                 android:id="@+id/tvNrONU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/colorSecondaryContainer"
+                android:background="?attr/colorPrimaryContainer"
                 android:textColor="?attr/colorOnSecondaryContainer"
                 android:gravity="center"
                 android:padding="5dp"
@@ -134,7 +133,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/colorSecondaryContainer"
+                android:background="?attr/colorPrimaryContainer"
                 android:textColor="?attr/colorOnSecondaryContainer"
                 android:gravity="center"
                 android:padding="5dp"

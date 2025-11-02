@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.color.MaterialColors
 import com.msk.produtosperigosos.R
 
 class DetalheProduto : AppCompatActivity() {
@@ -250,6 +251,7 @@ class DetalheProduto : AppCompatActivity() {
     private fun usarActionBar() {
         val toolbar = findViewById<Toolbar?>(R.id.toolbar)
         setSupportActionBar(toolbar)
+        supportActionBar?.title = getString(R.string.dica_produto)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
     }

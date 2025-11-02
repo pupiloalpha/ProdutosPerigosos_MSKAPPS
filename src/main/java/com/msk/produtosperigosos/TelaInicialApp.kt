@@ -1,5 +1,6 @@
 package com.msk.produtosperigosos
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.OnBackPressedCallback
@@ -28,6 +29,8 @@ class TelaInicialApp : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         setContentView(R.layout.tela_inicial)
 
         drawerLayout = findViewById(R.id.drawer_layout)
+        // Set the status bar scrim color to transparent
+        drawerLayout.setStatusBarBackgroundColor(Color.TRANSPARENT)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -80,6 +83,7 @@ class TelaInicialApp : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             R.id.nav_telefones -> openFragment(TelefonesUteis())
             R.id.nav_sobre -> openFragment(SobreApp())
         }
+        supportActionBar?.title = item.title
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
