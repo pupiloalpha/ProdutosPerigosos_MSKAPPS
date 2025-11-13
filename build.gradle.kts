@@ -13,15 +13,15 @@ android {
         applicationId = "com.msk.produtosperigosos"
         minSdk = 24
         targetSdk = 36
-        versionCode = 4020302
-        versionName = "2.3.2"
+        versionCode = 4020304
+        versionName = "2.3.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
