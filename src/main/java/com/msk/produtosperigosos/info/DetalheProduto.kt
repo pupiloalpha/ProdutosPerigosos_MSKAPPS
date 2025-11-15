@@ -12,6 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.color.MaterialColors
 import com.msk.produtosperigosos.R
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import com.msk.produtosperigosos.AppProdutosPerigosos // Sua Application class
+import com.msk.produtosperigosos.db.Dados // Sua Entidade do Room (Data Class)
 
 class DetalheProduto : AppCompatActivity() {
     private lateinit var r: Resources
@@ -31,9 +35,6 @@ class DetalheProduto : AppCompatActivity() {
     private var rotulo: ImageView? = null
 
     // VETORES COM DADOS DOS PRODUTOS
-    private lateinit var onu: Array<String>
-    private lateinit var produto: Array<String>
-    private lateinit var dados: Array<String>
     private lateinit var idRotulo: IntArray
     private var nclasse: String? = null
     private var nrisco: String? = null
@@ -41,6 +42,9 @@ class DetalheProduto : AppCompatActivity() {
     // VARIAVES QUE SERAO UTILIZADAS
     private var nProduto = 0
     private var guia = 0
+
+    // NOVO: Variável para armazenar o produto completo retornado do DB
+    private var produtoPerigoso: Dados? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +58,7 @@ class DetalheProduto : AppCompatActivity() {
         inicando()
         usarActionBar()
         buscaInfoProduto(nProduto)
-        mostraInfoProduto(nProduto)
+        mostraInfoProduto()
         defineRotuloClasse()
     }
 
@@ -73,12 +77,6 @@ class DetalheProduto : AppCompatActivity() {
         nivelProtecao = findViewById(R.id.tvNivelProtecao)
         isolamento = findViewById(R.id.tvIsolamento)
         evacuacao = findViewById(R.id.tvEvacuacao)
-
-
-        // BUSCA DETALHES NO ARQUIVO XML
-        onu = r.getStringArray(R.array.nr_onu)
-        produto = r.getStringArray(R.array.nome_produto)
-        dados = r.getStringArray(R.array.dados_produto)
 
         // DEFINE OS ROTULOS QUE SERAO EXIBIDOS
         idRotulo = intArrayOf(
@@ -105,34 +103,52 @@ class DetalheProduto : AppCompatActivity() {
     }
 
     private fun buscaInfoProduto(nProduto: Int) {
-        val a = ","
-        val array =
-            dados[nProduto].split(a.toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+        // 1. Inicia uma Coroutine no escopo da Activity (lifecycleScope)
+        // O acesso ao DB deve ser assíncrono.
+        lifecycleScope.launch {
 
-        guia = array[0].toInt()
-        nclasse = array[1]
-        nrisco = array[2]
-    }
+            // 2. Obtém acesso ao DAO através da classe Application (AppPerigosos)
+            // Certifique-se que o AppPerigosos está registrado no AndroidManifest.
+            val app = application as AppProdutosPerigosos
+            val dao = app.produtoPerigosoDao
 
-    private fun mostraInfoProduto(i: Int) {
-        nrONU?.text = r.getString(R.string.dica_nr_onu, onu[i])
-        nomeProduto?.text = produto[i]
+            // 3. Executa a busca otimizada no Room, usando a posição (nProduto)
+            // Lembre-se: nProduto já foi coletado no onCreate.
+            val produtoEncontrado = dao.buscarPorPosicao(nProduto)
 
-        if (nrisco == "0") {
-            nrRisco?.visibility = View.GONE
-            nomeRisco?.text = Guias.nomeGuia[guia]
-        } else {
-            nrRisco?.text = r.getString(R.string.dica_nr_risco, nrisco)
-            var j = 0
-            while (j < Riscos.nrRisco.size && nrisco != Riscos.nrRisco[j]) {
-                j++
-            }
-            if (j < Riscos.nrRisco.size) {
-                nomeRisco?.text = Riscos.nomeRisco[j]
+            // 4. Se o produto for encontrado, atualiza a UI
+            produtoEncontrado?.let { produto ->
+                produtoPerigoso = produto // Armazena o objeto completo para uso futuro
+
+                // Atualiza a UI e variáveis de lógica com os dados do objeto:
+                nrONU?.text = r.getString(R.string.dica_nr_onu, produto.numeroONU)
+                nomeProduto?.text = produto.descricao
+                nrClasse?.text = r.getString(R.string.dica_nr_classe, produto.classeRisco)
+                nrRisco?.text = produto.numeroRisco
+                guia = produto.guiaRisco.toInt()
+
+                if (nrisco == "0") {
+                    nrRisco?.visibility = View.GONE
+                    nomeRisco?.text = Guias.nomeGuia[guia]
+                } else {
+                    nrRisco?.text = r.getString(R.string.dica_nr_risco, produto.numeroRisco)
+                    var j = 0
+                    while (j < Riscos.nrRisco.size && nrisco != Riscos.nrRisco[j]) {
+                        j++
+                    }
+                    if (j < Riscos.nrRisco.size) {
+                        nomeRisco?.text = Riscos.nomeRisco[j]
+                    }
+                }
+
+            } ?: run {
+                // Caso o produto não seja encontrado (índice inválido ou DB vazio)
+                finish()
             }
         }
+    }
 
-        nrClasse?.text = r.getString(R.string.dica_nr_classe, nclasse)
+    private fun mostraInfoProduto() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             saude?.text = Html.fromHtml(Guias.riscoSaude[guia], Html.FROM_HTML_MODE_LEGACY)

@@ -5,9 +5,26 @@
 
     <!-- Strings para detalhes do aplicativo -->
 
-    <string name="info">Este aplicativo foi baseado em:\n- Resolução n. 5.232/2016 da Agência Nacional de Transportes Terrestres (ANTT)\n- NBR n. 7500/2013 da Associação Brasileira de Normas Técnicas (ABNT)\n- Manual de Emergências da Autoridade Nacional de Proteção Civil de Portugal (ANPC)\n- Recomendações para o transporte de produtos perigosos da Organização das Nações Unidas\n- Manual de fiscalização do transporte rodoviário nacional e internacional de
-produtos perigosos da ANTT de 2018\n- Guia de respostas a emergências do Departamento dos Transportes dos Estados Unidos (USDT) de 2016.</string>
-    <string name="desenvolvedor">Versão: %1$s\n\nDesenvolvedor: Paulo E S Mesquita\nContato: mskapps.brazil@gmail.com</string>
+    <string name="info"><b>Este aplicativo foi baseado nos seguintes documentos:</b>\n
+        \n- <b>Resolução n. 5.998/2022</b> da Agência Nacional de Transportes Terrestres (ANTT)
+        \n- <b>NBR n. 7500/2013</b> da Associação Brasileira de Normas Técnicas (ABNT)
+        \n- <b>Manual de Emergências</b> da Autoridade Nacional de Proteção Civil de Portugal (ANPC)
+        \n- Recomendações para o transporte de produtos perigosos da Organização das Nações Unidas
+        \n- <b>Manual de fiscalização</b> do transporte rodoviário nacional e internacional de produtos perigosos da ANTT de 2018
+        \n- <b>Guia de respostas a emergências</b> do Departamento dos Transportes dos Estados Unidos (USDT) de 2016.</string>
+    <string name="ajuda"><b>O menu lateral possui as seguintes informações:</b>\n
+        \n- <b>Rótulos e painéis:</b> detalhes sobre os painéis de segurança e rótulos de risco;
+        \n- <b>Classes de risco:</b> relação de classes de risco, detalhes e subclasses;
+        \n- <b>Números de risco:</b> relação de números de risco;
+        \n- <b>Relação de produtos:</b> relação de produtos e os detalhes de cada um;
+        \n- <b>Códigos de infrações:</b> relação de códigos e amparos de infrações;
+        \n- <b>Telefones úteis:</b> acesso rápido a telefones úteis.</string>
+    <string name="observacoes"><b>Observações:</b>\n
+        \n- Ao clicar em cada classe de risco você tem acesso à descrição da classe e as subclasses;
+        \n- Ao clicar em cada produto da relação de produtos você tem acesso a detalhes do produtos, seu número de risco e o resumo do guia de respostas a emergências.</string>
+    <string name="desenvolvedor">Versão: %1$s\n
+        \nDesenvolvedor: Paulo E S Mesquita
+        \nContato: mskapps.brazil@gmail.com</string>
     <string name="dica_sair">ATENÇÃO</string>
     <string name="dica_detalhe_classe">Detalhes da Classe</string>
     <string name="dica_produto">Detalhes do Produto</string>
@@ -27,7 +44,7 @@ produtos perigosos da ANTT de 2018\n- Guia de respostas a emergências do Depart
     <!-- Strings para tela inicial -->
 
     <string name="dica_app">LISTA DE PRODUTOS PERIGOSOS</string>
-    <string name="dica_navegar">Para abrir o menu lateral, clique no ícone de navegação do canto superior esquerdo da tela ou deslize o dedo iniciando da borda esquerda para a direita da tela.</string>
+    <string name="dica_navegar">Para abrir o menu lateral, clique no <b>ícone de navegação</b> do canto superior esquerdo da tela ou deslize o dedo iniciando da borda esquerda para a direita da tela.</string>
     <string name="sobre">Baseado no Regulamento de Transporte Terrestre de Produtos Perigosos da ANTT, na NBR 7500 da ABNT, no Manual de Emergência da ANPC e nas Recomendações para transporte de produtos perigosos da ONU.</string>
     <string name="navegar">Opções de Navegação</string>
 
@@ -61,9 +78,9 @@ produtos perigosos da ANTT de 2018\n- Guia de respostas a emergências do Depart
     <string name="dica_isolamento">Isolamento:</string>
     <string name="dica_evacuacao">Evacuação:</string>
     <string name="titulo_painel">SIMBOLOGIA DE RISCO</string>
-    <string name="dica_painel">A identificação de riscos é constituída pela sinalização da unidade de transporte (rótulos de risco e painéis de segurança) e pela rotulagem das embalagens interna e externa (rótulos de risco, de segurança, especiais e símbolos de manuseio, quando aplicável).</string>
-    <string name="dica_painel_1">O rótulo de risco é dividido em duas metades, sendo a metade superior do rótulo reservada para o símbolo de risco ou para o número das subclasses e a metade inferior para textos indicativos da natureza do risco, o número da classe ou subclasse e grupo de compatibilidade, quando apropriado.\nExistem ainda outros rótulos que devem utilizados para identificar outras situações de risco.</string>
-    <string name="dica_painel_2">O painel de segurança comporta, conforme o caso, os números de identificação de risco (nº de risco) e do produto (nº ONU).\nQuando existem mais de um tipo de produtos sendo transportados, o painel utilizado não recebe números para indicar esta situação.</string>
+    <string name="dica_painel">A identificação de riscos é constituída pela sinalização da unidade de transporte (<b>rótulos de risco e painéis de segurança</b>) e pela rotulagem das embalagens interna e externa (rótulos de risco, de segurança, especiais e símbolos de manuseio, quando aplicável).</string>
+    <string name="dica_painel_1">O rótulo de risco é dividido em duas metades, sendo a metade superior do rótulo reservada para o <b>símbolo de risco ou para o número das subclasses</b> e a metade inferior para textos indicativos da natureza do risco, o número da classe ou subclasse e grupo de compatibilidade, quando apropriado.\nExistem ainda outros rótulos que devem utilizados para identificar outras situações de risco.</string>
+    <string name="dica_painel_2">O painel de segurança comporta, conforme o caso, os <b>números de identificação de risco</b> (nº de risco) e do produto (nº ONU).\nQuando existem mais de um tipo de produtos sendo transportados, o painel utilizado não recebe números para indicar esta situação.</string>
 
     <!-- Strings de classes de produtos -->
 

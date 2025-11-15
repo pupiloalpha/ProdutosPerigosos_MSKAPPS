@@ -32,10 +32,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="5dp"
-            android:paddingRight="10dp"
+            android:padding="10dp"
             android:text="@string/info"
+            android:textAppearance="?android:attr/textAppearance" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="@string/ajuda"
+            android:textAppearance="?android:attr/textAppearance" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="@string/observacoes"
             android:textAppearance="?android:attr/textAppearance" />
 
         <TextView
