@@ -3,12 +3,15 @@ package com.msk.produtosperigosos
 import android.graphics.Color
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
@@ -27,12 +30,12 @@ class TelaInicialApp : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.tela_inicial)
 
         drawerLayout = findViewById(R.id.drawer_layout)
-        // Set the status bar scrim color to transparent
-        drawerLayout.setStatusBarBackgroundColor(Color.TRANSPARENT)
+        // Set the status bar scrim color to transparent - This line is now redundant as we handle insets manually
+        // drawerLayout.setStatusBarBackgroundColor(Color.TRANSPARENT)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -50,6 +53,14 @@ class TelaInicialApp : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+        // Handle window insets for the main content layout
+        val mainContentLayout = findViewById<View>(R.id.main_content_layout)
+        ViewCompat.setOnApplyWindowInsetsListener(mainContentLayout) { view, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
         if (savedInstanceState == null) {
             openFragment(InicioFragment())
         }
@@ -61,7 +72,8 @@ class TelaInicialApp : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 } else {
                     if (supportFragmentManager.backStackEntryCount > 0) {
                         supportFragmentManager.popBackStack()
-                    } else {
+                    }
+                    else {
                         finish()
                     }
                 }

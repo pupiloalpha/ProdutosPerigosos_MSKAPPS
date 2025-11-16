@@ -14,7 +14,7 @@ interface ProdutoDAO {
 
     // 🔎 Função de Busca Otimizada: Para a tela DetalheProduto.kt
     @Query("SELECT * FROM produtos_perigosos WHERE numeroONU = :onu LIMIT 1")
-    suspend fun buscarPorONU(onu: String): Dados?
+    suspend fun buscarPorONU(onu: String?): Dados?
 
     // 📜 Função de Consulta (Para a lista inicial de busca, por exemplo)
     @Query("SELECT * FROM produtos_perigosos ORDER BY numeroONU ASC")

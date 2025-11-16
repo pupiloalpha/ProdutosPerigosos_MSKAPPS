@@ -10,7 +10,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.google.android.material.color.MaterialColors
 import com.msk.produtosperigosos.R
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
@@ -34,13 +33,12 @@ class DetalheProduto : AppCompatActivity() {
     private var evacuacao: TextView? = null
     private var rotulo: ImageView? = null
 
-    // VETORES COM DADOS DOS PRODUTOS
+    // VETORES COM DADOS DOS ROTULOS DOS PRODUTOS
     private lateinit var idRotulo: IntArray
-    private var nclasse: String? = null
-    private var nrisco: String? = null
 
     // VARIAVES QUE SERAO UTILIZADAS
-    private var nProduto = 0
+    private var nrisco: String? = null
+    private var nProduto: String? = null
     private var guia = 0
 
     // NOVO: Variável para armazenar o produto completo retornado do DB
@@ -53,13 +51,12 @@ class DetalheProduto : AppCompatActivity() {
         r = resources
         // RECEBE NUMERO PRODUTO
         val envelope = intent.extras
-        nProduto = envelope!!.getInt("nr")
+        nProduto = envelope!!.getString("NUMERO_ONU")
 
         inicando()
         usarActionBar()
         buscaInfoProduto(nProduto)
         mostraInfoProduto()
-        defineRotuloClasse()
     }
 
     private fun inicando() {
@@ -102,7 +99,7 @@ class DetalheProduto : AppCompatActivity() {
         )
     }
 
-    private fun buscaInfoProduto(nProduto: Int) {
+    private fun buscaInfoProduto(nProduto: String?) {
         // 1. Inicia uma Coroutine no escopo da Activity (lifecycleScope)
         // O acesso ao DB deve ser assíncrono.
         lifecycleScope.launch {
@@ -114,7 +111,7 @@ class DetalheProduto : AppCompatActivity() {
 
             // 3. Executa a busca otimizada no Room, usando a posição (nProduto)
             // Lembre-se: nProduto já foi coletado no onCreate.
-            val produtoEncontrado = dao.buscarPorPosicao(nProduto)
+            val produtoEncontrado = dao.buscarPorONU(nProduto)
 
             // 4. Se o produto for encontrado, atualiza a UI
             produtoEncontrado?.let { produto ->
@@ -125,6 +122,8 @@ class DetalheProduto : AppCompatActivity() {
                 nomeProduto?.text = produto.descricao
                 nrClasse?.text = r.getString(R.string.dica_nr_classe, produto.classeRisco)
                 nrRisco?.text = produto.numeroRisco
+                nrisco = produto.numeroRisco
+                defineRotuloClasse(produto.classeRisco)
                 guia = produto.guiaRisco.toInt()
 
                 if (nrisco == "0") {
@@ -171,8 +170,8 @@ class DetalheProduto : AppCompatActivity() {
     }
 
 
-    private fun defineRotuloClasse() {
-        when (nclasse) {
+    private fun defineRotuloClasse(classeRisco: String?) {
+        when (classeRisco) {
             "9" -> {
                 rotulo?.setImageResource(idRotulo[18])
                 nomeClasse?.text = Riscos.classeRisco[21]
