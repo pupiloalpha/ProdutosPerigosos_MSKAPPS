@@ -5,11 +5,10 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    app:statusBarScrim="@android:color/transparent"
     tools:context=".TelaInicialApp">
 
     <LinearLayout
+        android:id="@+id/main_content_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
